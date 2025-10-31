@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: mertani-postgres
+    environment:
+      POSTGRES_USER: mertani
+      POSTGRES_PASSWORD: mertani
+      POSTGRES_DB: mertani-db
+    ports:
+      - "5442:5432"
+    volumes:
+      - mertani_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  mertani_postgres_data:
