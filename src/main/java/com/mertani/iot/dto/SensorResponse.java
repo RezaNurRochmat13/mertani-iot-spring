@@ -1,11 +1,14 @@
 package com.mertani.iot.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import lombok.Data;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class SensorResponse {
     private Long id;
     private String name;

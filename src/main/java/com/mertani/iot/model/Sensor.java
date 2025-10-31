@@ -1,12 +1,15 @@
 package com.mertani.iot.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "sensors")
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Sensor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

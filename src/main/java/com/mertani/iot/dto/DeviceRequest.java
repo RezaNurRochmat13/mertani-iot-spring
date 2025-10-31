@@ -1,9 +1,12 @@
 package com.mertani.iot.dto;
 
 import jakarta.validation.constraints.NotBlank;
-import lombok.Data;
+import lombok.*;
 
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class DeviceRequest {
     @NotBlank(message = "Name is required")
     private String name;
